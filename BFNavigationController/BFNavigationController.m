@@ -27,7 +27,7 @@ static const CGFloat kPushPopAnimationDuration = 0.2;
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 @implementation BFNavigationController {
-    NSMutableArray *_viewControllers;
+    NSMutableArray<NSViewController*> *_viewControllers;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -96,19 +96,19 @@ static const CGFloat kPushPopAnimationDuration = 0.2;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-- (NSArray *)viewControllers {
+- (NSArray<NSViewController*> *)viewControllers {
     return [NSArray arrayWithArray: _viewControllers];
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-- (void)setViewControllers:(NSArray *)viewControllers {
+- (void)setViewControllers:(NSArray<NSViewController*> *)viewControllers {
     [self _setViewControllers:viewControllers animated:NO];
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-- (void)setViewControllers:(NSArray *)viewControllers animated:(BOOL)animated {
+- (void)setViewControllers:(NSArray<NSViewController*> *)viewControllers animated:(BOOL)animated {
     [self _setViewControllers:viewControllers animated:animated];
 }
 
@@ -117,7 +117,7 @@ static const CGFloat kPushPopAnimationDuration = 0.2;
 
 #pragma mark - Helpers & Navigation
 
-- (void)_setViewControllers:(NSArray *)controllers animated:(BOOL)animated {
+- (void)_setViewControllers:(NSArray<NSViewController*> *)controllers animated:(BOOL)animated {
     NSViewController *visibleController = self.visibleViewController;
     NSViewController *newTopmostController = [controllers lastObject];
     

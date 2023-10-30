@@ -64,7 +64,7 @@
 /**
  *  The view controllers currently on the navigation stack.
  */ 
-@property (nonatomic, copy) NSArray *viewControllers;
+@property (nonatomic, copy) NSArray<NSViewController*> *viewControllers;
 
 /**
  *  Replaces the view controllers currently managed by the navigation controller with the specified items.
