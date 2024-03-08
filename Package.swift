@@ -15,11 +15,11 @@ import PackageDescription
      targets: [
          .target(
              name: "BFNavigationController",
-             path: "",
-             sources: ["BFNavigationController"],
-             publicHeadersPath: "BFNavigationController",
+             path: "BFNavigationController",
+             sources: [""],
+             publicHeadersPath: "",
              cSettings: [
-                 .headerSearchPath("BFNavigationController")
+                 .headerSearchPath("")
              ]
          )
      ]
